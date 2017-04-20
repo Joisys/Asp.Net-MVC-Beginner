@@ -1,0 +1,18 @@
+﻿@model Asp.Net_MVC_Beginner.Data.Location
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Edit Location</h2>
+<hr />
+@using (Html.BeginForm("Update", "Location"))
+{
+    <fieldset>
+        @Html.HiddenFor(model => model.Id)
+        @Html.TextBoxFor(model => model.Title)
+        <input type="submit" value="Edit" />
+    </fieldset>
+}
+<hr />
+@Html.ActionLink("Back to List", "Index")
